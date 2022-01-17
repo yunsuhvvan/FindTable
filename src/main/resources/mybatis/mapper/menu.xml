@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace = "com.reserve.restaurant.repository.MenuRepository">
+
+	<insert id="addMenu" parameterType="Menu">
+    	INSERT into menu (
+    		menu_no, 
+    		menu_name, 
+    		menu_price, 
+    		res_no
+    	) values (
+    		menu_no_seq.nextval,
+    		#{menuName},
+	        #{menuPrice},
+	        #{resNo}
+	    )
+	</insert>
+	
+	
+	
+	<!-- 메뉴불러오기 -->
+	<select id="selectMenu" parameterType="Long" resultType="Menu">
+		SELECT menu_no, menu_name, menu_price, res_no
+		  FROM menu
+		 WHERE res_no = #{resNo}
+	</select>
+	
+	<!-- 메뉴 수정 -->
+	<update id="modifyMenu" parameterType="Menu">
+		UPDATE menu
+		   SET menu_name = #{menuName},
+		   	   menu_price = #{menuPrice}
+		 WHERE menu_no = #{menuNo}
+	</update>
+	
+	<!-- 메뉴 삭제 -->
+	<delete id="menuDelete" parameterType="Long">
+		DELETE 
+		  FROM MENU
+		 WHERE menu_no = #{menuNo}
+	</delete> 
+	
+</mapper>
