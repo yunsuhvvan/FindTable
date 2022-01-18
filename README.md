@@ -29,19 +29,37 @@
 
 
 ### * 카카오지도 API
+ <img src="https://user-images.githubusercontent.com/87231093/149850770-cf1ef5e4-1c60-4746-bbc7-62e31647c46f.png" width="500" height="300"/>
+ 
 
-### * IMPORT 이용하여 결제 구현
+### * IamPORT 이용하여 카카오페이  구현
+<img src="https://user-images.githubusercontent.com/87231093/149850906-1d1cd822-3401-448a-9f80-8efa1cee6587.png" width="500" height="300"/>
 
 ### * 예약하기
+<img src="https://user-images.githubusercontent.com/87231093/149851153-6efd0796-ecc5-4eaf-bf13-f1fa66e276f2.png" width="500" height="300"/>
 
-### * 공지사항 CRUD
-### * 개인정보수정
+#### 1. datepicker를 이용하여 날짜 선택
+#### 2. 같은 날짜 , 같은 시간을 선택하면 사용자에게 alert 창 띄움
+
+***
+
+#### 그 외 구현 한 것들
+
+|구현|설명|  
+|------|------|
+|아이디찾기|중복되는 아이디가 있으면 ajax를 통해 중복 유무를 검사|
+|비밀번호찾기|JavaMailSender를 이용, 랜덤 문자열 메서드 생성 후 메일로 발송 후 임시비밀번호를 DB에 저장|
+|공지사항CRUD|특이사항 없음|
+|식당 찜하기|식당에 State 칼럼을 추가하여 찜 여부 확인|
+|개인정보수정|특이사항 없음|
+|리뷰페이지|사용자가 작성한 모든 리뷰를 Ajax를 이용하여 가져옴|
+
 
 
 
 *** 
 
-##### 배포 후 발생한 문제 
+##### 배포 후 발생한 문제  (해결 할 것)
 ##### 1.SNS로그인,Email인증하기가 local에서는 실행이 되나 EC2 인스턴스에서는 실행이 되지 않는 문제 발견
 ##### 2.에러 페이지 처리하기
 
